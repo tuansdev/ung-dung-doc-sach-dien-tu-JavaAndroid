@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EBook Reader</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="search">Search</string>
+    <string name="read_online">Read Online</string>
+    <string name="import_">Import</string>
+    <string name="ebook">Ebook</string>
+    <string name="memory">Memory</string>
+    <string name="profile">Profile</string>
+</resources>

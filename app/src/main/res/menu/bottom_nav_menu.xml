@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/ebook" />
+
+    <item
+        android:id="@+id/nav_books"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/memory" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="@string/profile"
+        tools:ignore="MenuTitle" />
+</menu>

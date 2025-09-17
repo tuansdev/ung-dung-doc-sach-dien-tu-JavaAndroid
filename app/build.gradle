@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.ebookreader'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.ebookreader"
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+    implementation 'com.google.api-client:google-api-client-android:1.32.2'
+    implementation 'com.google.apis:google-api-services-drive:v3-rev20220815-2.0.0'
+    implementation 'com.google.android.gms:play-services-auth:20.7.0' // Để xác thực
+    implementation 'com.google.http-client:google-http-client-jackson2:1.42.3' // Thêm thư viện Jackson
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.room:room-runtime:2.5.2'
+    annotationProcessor 'androidx.room:room-compiler:2.5.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation('com.github.barteksc:AndroidPdfViewer:3.1.0-beta.1') {
+        exclude group: 'com.android.support', module: 'support-compat'
+    }
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
+
+}
